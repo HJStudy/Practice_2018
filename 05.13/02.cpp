@@ -6,6 +6,7 @@
 #include <combaseapi.h>
 
 
+
 interface Test_inter{
 	virtual void printi() = 0;
 };
@@ -29,6 +30,13 @@ int main( void ){
 
 	tO->print();
 	tO->printi();
+
+
+	Test_inter * tI = tO;
+
+	tI->printi();
+
+	delete tO;
 
 	return 0;
 
